@@ -46,7 +46,9 @@
     "babel-loader": "^9.1.2",
     "babel-plugin-transform-class-properties": "^6.24.1",
     "babel-plugin-transform-es2015-modules-commonjs": "^6.26.2",
+    "file-loader": "^6.2.0",
     "html-webpack-plugin": "^5.5.0",
+    "url-loader": "^4.1.1",
     "webpack": "^5.75.0",
     "webpack-cli": "^5.0.1",
     "webpack-dev-server": "^4.11.1"
