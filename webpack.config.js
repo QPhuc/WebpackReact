@@ -10,7 +10,21 @@ module.exports = ({ mode } = { mode: "production" }) => {
         output: {
             publicPath: "/",
             path: path.resolve(__dirname, "build"),
-            filename: "bundled.js"
+            filename: "bundle.js"
+        },
+        module: {
+            rules: [
+                {
+                    test: /\.jpe?g|png$/,
+                    exclude: /node_modules/,
+                    use: ["url-loader", "file-loader"]
+                },
+                {
+                    test: /\.(js|jsx)$/,
+                    exclude: /node_modules/,
+                    loader: "babel-loader"
+                }
+            ]
         },
         plugins: [
             new HtmlWebpackPlugin({
